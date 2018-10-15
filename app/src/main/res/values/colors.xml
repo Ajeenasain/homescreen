@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    <color name="colorPrimary">#3F51B5</color>
+    -->
+    <color name="myColorPrimary">#000000</color>
+    <!--
+    <color name="colorPrimaryDark">#303F9F</color>\
+
+    -->
+    <color name="myColorPrimaryDark">#FFFFFF</color>\
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="toolbar_bg_color">#FFFFFF</color>
+    <color name="toolbar_drawer_arrow_color">#000000</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="splash_screen_bg_color">#cf1c22</color>
+
+    <color name="lb_tv_white">#FFCCCCCC</color>
+</resources>

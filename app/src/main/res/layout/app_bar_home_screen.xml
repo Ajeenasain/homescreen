@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.HomeScreenActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/home_screen_toolbar_layout" />
+
+        <!--Here I will add search and filter screens -->
+        <RelativeLayout
+            android:id="@+id/toolbar_utility_window_parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/splash_screen_bg_color">
+
+            <RelativeLayout
+                android:id="@+id/toolbar_search_window_parent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/toolbar_search_window_search_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toolbar_search_window_search_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="@dimen/toolbar_search_window_search_icon_margin_left"
+                    android:layout_marginTop="@dimen/toolbar_search_window_search_icon_margin_top_bottom"
+                    android:layout_marginBottom="@dimen/toolbar_search_window_search_icon_margin_top_bottom"/>
+
+                <EditText
+                    android:id="@+id/toolbar_search_window_search_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/toolbar_search_window_search_image_view"
+                    android:layout_marginLeft="@dimen/toolbar_search_window_search_icon_margin_left"
+                    android:layout_centerVertical="true"
+                    android:hint="@string/toolbar_search_window_search_hint_text"
+                    android:background="@android:color/transparent"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:maxLength="50"
+                    style="@style/UtilityWindowTextStyle"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/toolbar_search_window_search_text_cancel_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/toolbar_search_window_search_text_cancel_margin_right"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/toolbar_search_window_cancel_icon"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/toolbar_filter_window_parent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/toolbar_filter_window_search_icon_margin_top_bottom"
+                        android:layout_marginBottom="@dimen/toolbar_filter_window_search_icon_margin_top_bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                        android:id="@+id/toolbar_filter_window_menu_item_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/toolbar_filter_window_menu_item_01_text"
+                        style="@style/UtilityWindowTextStyle"
+                        android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/toolbar_filter_window_menu_item_margin_left_right"
+                        android:layout_marginRight="@dimen/toolbar_filter_window_menu_item_margin_left_right"/>
+
+                    <TextView
+                        android:id="@+id/toolbar_filter_window_menu_item_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/toolbar_filter_window_menu_item_02_text"
+                        style="@style/UtilityWindowTextStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/toolbar_filter_window_menu_item_01"
+                        android:layout_marginLeft="@dimen/toolbar_filter_window_menu_item_margin_left_right"
+                        android:layout_marginRight="@dimen/toolbar_filter_window_menu_item_margin_left_right"/>
+
+                        <ImageView
+                            android:id="@+id/toolbar_filter_window_menu_item_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/toolbar_filter_menu_fav_icon"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/toolbar_filter_window_menu_item_02"
+                            android:layout_marginLeft="@dimen/toolbar_filter_window_menu_item_margin_left_right"
+                            android:layout_marginRight="@dimen/toolbar_filter_window_menu_item_margin_left_right"/>
+
+                        <Spinner
+                            android:id="@+id/toolbar_filter_window_menu_item_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:prompt="@string/toolbar_filter_window_menu_item_04_text"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/toolbar_filter_window_menu_item_03"
+                            android:layout_marginLeft="@dimen/toolbar_filter_window_menu_item_margin_left_right"
+                            android:layout_marginRight="@dimen/toolbar_filter_window_menu_item_margin_left_right"/>
+
+
+                        <Spinner
+                            android:id="@+id/toolbar_filter_window_menu_item_05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:prompt="@string/toolbar_filter_window_menu_item_05_text"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/toolbar_filter_window_menu_item_04"
+                            android:layout_marginLeft="@dimen/toolbar_filter_window_menu_item_margin_left_right"
+                            android:layout_marginRight="@dimen/toolbar_filter_window_menu_item_margin_left_right"/>
+
+
+
+                        <TextView
+                            android:id="@+id/toolbar_filter_window_menu_item_06"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/toolbar_filter_window_menu_item_06_text"
+                            style="@style/UtilityWindowTextStyle"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/toolbar_filter_window_menu_item_05"
+                            android:layout_marginLeft="@dimen/toolbar_filter_window_menu_item_margin_left_right"
+                            android:layout_marginRight="@dimen/toolbar_filter_window_menu_item_margin_left_right"/>
+
+                    </RelativeLayout>
+                </android.support.v4.widget.NestedScrollView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/home_screen_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

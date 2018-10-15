@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ACTLiveTv</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="splash_screen_act_logo_image_desc">ACT_LOGO</string>
+    <string name="toolbar_search_window_search_hint_text">Type channel name or Program name</string>
+
+    <string name="toolbar_filter_window_menu_item_01_text">All</string>
+    <string name="toolbar_filter_window_menu_item_02_text">HD</string>
+    <string name="toolbar_filter_window_menu_item_04_text">Categories</string>
+    <string name="toolbar_filter_window_menu_item_05_text">Language</string>
+    <string name="toolbar_filter_window_menu_item_06_text">Live</string>
+
+</resources>
